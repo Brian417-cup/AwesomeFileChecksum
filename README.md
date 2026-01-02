@@ -1,10 +1,12 @@
-# 校验和批处理生成工具 (Checksum Batch Generator)
+# 校验和批处理生成工具 (AwesomeFileChecksum)
 
 [![Java](https://img.shields.io/badge/Java-8+-orange?logo=java)](https://www.oracle.com/java/)
 [![JavaFX](https://img.shields.io/badge/JavaFX-8+-blue?logo=javafx)](https://openjfx.io/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-这是一款基于 JavaFX 开发的桌面工具，旨在提供简洁、高效的本地文件校验方案。它支持 SHA-256 和 MD5 算法的批量计算，并充分利用 JavaFX 的异步任务（Task）机制，确保在处理海量或超大文件时 UI 界面始终丝滑流畅
+这是一款支持 **图形界面（GUI）** 与 **控制台终端（CLI）** 双模式的本地文件校验工具。
+- **GUI 版**：基于 JavaFX 开发，适合交互式操作，支持拖放、实时进度反馈。
+- **CLI 版**：纯终端运行，无图形依赖，适合服务器、脚本自动化或无头（headless）环境。
 
 ---
 
@@ -37,7 +39,7 @@
 | 组件         | 版本                    | 说明                     |
 | ------------ | ----------------------- | ------------------------ |
 | **操作系统** | Windows / macOS / Linux | 全平台64位支持           |
-| **Java**     | **JDK 8+ **             | 推荐使用JDK8，内置JavaFX |
+| **Java**     | **JDK 8+**             | 推荐使用JDK8，内置JavaFX |
 | **内存**     | ≥ 512 MB                | 大文件处理建议 ≥ 2GB     |
 
 > ⚠️ **重要**：  
@@ -45,24 +47,24 @@
 
 ---
 
-## 🚀 快速开始
+## 🚀 快速开始（GUI模式）
 
 推荐通过 `JRE`环境 和 下载 `SplitAndCombineFile.jar` 运行
 
 ### Windows / MacOS 平台
 
-1. 下载 [最新 Release下的JAR包](https://github.com/Brian417-cup/AwesomeFileChecksum/releases/tag/v1.0.0) ，配置JRE8+环境
+1. 下载 [最新 Release下的JAR包](https://github.com/Brian417-cup/AwesomeFileChecksum/releases/tag/v1.1.0) ，配置JRE8+环境
 2. 终端执行：
 
   ```bash
-java -jar <ChecksumBatchGenerator.jar完整路径>
+java -jar <AwesomeFileChecksum.jar完整路径>
   ```
 
 > 💡 *如果有需要，在Windows平台可以通过 exe4j 等软件将jre和jar包打包成一个可执行文件来一键运行！！*
 
 ### Linux 平台
 
-1. 下载 [最新 Release下的JAR包](https://github.com/Brian417-cup/AwesomeFileChecksum/releases/tag/v1.0.0) ，配置JRE8+环境
+1. 下载 [最新 Release下的JAR包](https://github.com/Brian417-cup/AwesomeFileChecksum/releases/tag/v1.1.0) ，配置JRE8+环境
 2. 配置 X Server 环境（针对终端服务器，否则跳过这步）
 
   ```bash
@@ -72,5 +74,14 @@ export DISPLAY=<客户端IP>:0.0
 3. 终端执行：
 
   ```bash
-java -Dprism.order=sw -jar <ChecksumBatchGenerator.jar完整路径>
+java -Dprism.order=sw -jar <AwesomeFileChecksum.jar完整路径>
   ```
+
+## 🚀 快速开始（CLI模式）
+
+1. 下载 [最新 Release下的JAR包](https://github.com/Brian417-cup/AwesomeFileChecksum/releases/tag/v1.1.0) ，配置JRE8+环境
+2. 终端执行：
+
+```shell
+  java -jar <AwesomeFileChecksum_Console.jar完整路径>
+```
